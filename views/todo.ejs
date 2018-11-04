@@ -1,0 +1,35 @@
+<html>
+    <head>
+        
+         <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="../assets/styles.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <script src = "../assets/todo-list-creator.js"></script>
+        <title> To Do App </title>
+    </head>
+    <body style=" font-family: 'Nunito', sans-serif;">
+        <div id='heading'>
+            <h1 class="display-4 text-info"> To Do App</h1>
+        </div><hr>
+        <div id='todo-table'>
+            <form>
+                <input type="text" name="item" placeholder="Add new item/task/todo...." required/>
+                <button  class="btn input-btn" type="submit">Add to List</button>
+            </form>
+            <h1 class="text-info">Your Tasks:</h1>
+            <div class = "jumbotron bg-white">
+            <ul>
+                <% for (var i = 0; i< todos.length; i++){%>
+                    <li> <%=todos[i].item%> </li><br>
+              <%  } %>
+            </ul>
+        </div>
+        </div>
+    </body>
+</html>
